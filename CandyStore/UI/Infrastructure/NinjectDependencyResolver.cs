@@ -6,6 +6,7 @@ using Moq;
 using Ninject;
 using Domain.Entities;
 using Domain.Abstract;
+using Domain.DataBase;
 
 namespace UI.Infrastructure
 {
@@ -32,15 +33,7 @@ namespace UI.Infrastructure
         private void AddBindings()
         {
             // Здесь размещаются привязки
-            Mock<ICandyRepository> mock = new Mock<ICandyRepository>();
-
-            mock.Setup(m => m.Candies).Returns(new List<Candy>
-            {
-                new Candy { Name = "Chocolate bar", Price = 3, Weight = 150 },
-                new Candy { Name = "Marshmallow", Price=5, Weight = 100 },
-                new Candy { Name = "Barny", Price=1.5M, Weight = 50 }
-            });
-            kernel.Bind<ICandyRepository>().ToConstant(mock.Object);
+            kernel.Bind<ICandyRepository>().To<EFCandyRepository>();
         }
     }
 }

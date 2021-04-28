@@ -96,3 +96,8 @@ D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\obj\Debug\UI.csproj.CoreCo
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\obj\Debug\UI.csproj.CopyComplete
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\obj\Debug\UI.dll
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\obj\Debug\UI.pdb
+D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\EntityFramework.dll
+D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\EntityFramework.SqlServer.dll
+D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\Domain.dll.config
+D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\EntityFramework.xml
+D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\EntityFramework.SqlServer.xml

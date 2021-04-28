@@ -73,6 +73,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\ICandyRepository.cs" />
+    <Compile Include="DataBase\EFDbContext.cs" />
+    <Compile Include="DataBase\EFCandyRepository.cs" />
     <Compile Include="Entities\Candy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
