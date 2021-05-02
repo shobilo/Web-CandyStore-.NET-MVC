@@ -10,5 +10,6 @@ namespace UI.ViewModels
     {
         public IEnumerable<Candy> Candies { get; set; }
         public PagingInfo PagingInfo { get; set; }
+        public string CurrentCategory { get; set; }
     }
 }

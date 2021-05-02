@@ -18,11 +18,12 @@ namespace UI.Controllers
         {
             repository = rep;
         }
-        public ViewResult List(int page = 1)
+        public ViewResult List(string category, int page = 1)
         {
             CandiesListViewModel model = new CandiesListViewModel
             {
                 Candies = repository.Candies
+                .Where(candy => category == null || candy.Category == category)
                 .OrderBy(candy => candy.CandyId)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize),
@@ -31,8 +32,11 @@ namespace UI.Controllers
                 {
                     CurrentPage = page,
                     ItemsPerPage = pageSize,
-                    TotalItems = repository.Candies.Count()
-                }
+                    TotalItems = category == null ?
+                    repository.Candies.Count() :
+                    repository.Candies.Where(candy => candy.Category == category).Count(),
+                },
+                CurrentCategory = category,
             };
             return View(model);
         }

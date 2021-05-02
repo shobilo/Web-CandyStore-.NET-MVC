@@ -9,16 +9,26 @@
 </head>
 <body>
     <header>
-        <div class="navbar navbar-expand-sm navbar-dark bg-primary" role="navigation" >
-            <a class="navbar-brand" href="#">Сладкоежкин</a>
-        </div>
-    </header>
-    <main>
-        <div class="row panel">
-            <div id="categories" class="col-md-2">
-                Здесь будут категории
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+            <a class="navbar-brand" href="/">Сладкоежкин - жизнь слаще с конфетами</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-md-5 offset-1">
+        </nav>
+    </header>
+    <main style="margin-top:20px;">
+        <div class="row">
+            <div id="categories" class="col-md-2" style="margin-left:10px;">
+                @Html.Action("Menu", "NavCategory")
+            </div>
+            <div class="col-md-6 offset-1">
                 @RenderBody()
             </div>
         </div>
