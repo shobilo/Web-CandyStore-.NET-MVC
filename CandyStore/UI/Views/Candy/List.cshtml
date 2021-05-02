@@ -8,13 +8,7 @@
 
 @foreach (var candy in @Model.Candies)
 {
-    <div class="card">
-        <h3>
-            <strong>@candy.Name</strong>
-            <span class="float-right badge badge-info">@candy.Price руб</span>
-        </h3>
-        <span class="lead">@candy.Description</span>
-    </div>
+    @Html.Partial("CandySummary", candy);
 }
 
 <div class="btn-group-lg float-sm-left">
