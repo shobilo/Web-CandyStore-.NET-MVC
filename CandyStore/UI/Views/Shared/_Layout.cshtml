@@ -3,12 +3,26 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
-        @RenderBody()
-    </div>
+    <header>
+        <div class="navbar navbar-expand-sm navbar-dark bg-primary" role="navigation" >
+            <a class="navbar-brand" href="#">Сладкоежкин</a>
+        </div>
+    </header>
+    <main>
+        <div class="row panel">
+            <div id="categories" class="col-md-2">
+                Здесь будут категории
+            </div>
+            <div class="col-md-5 offset-1">
+                @RenderBody()
+            </div>
+        </div>
+    </main>
 </body>
 </html>
 
