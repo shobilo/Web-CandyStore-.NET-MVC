@@ -52,6 +52,8 @@ D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\roslyn\VBCSCompiler.ex
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\roslyn\VBCSCompiler.exe.config
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\Castle.Core.dll
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\Domain.dll
+D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\EntityFramework.dll
+D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\EntityFramework.SqlServer.dll
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\Microsoft.Web.Infrastructure.dll
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\Moq.dll
@@ -68,7 +70,10 @@ D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\System.Web.Webpages.dl
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\System.Web.Webpages.Razor.dll
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\WebActivator.dll
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\Domain.pdb
+D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\Domain.dll.config
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\Castle.Core.xml
+D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\EntityFramework.xml
+D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\EntityFramework.SqlServer.xml
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\Moq.xml
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\Ninject.pdb
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\Ninject.xml
@@ -96,8 +101,3 @@ D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\obj\Debug\UI.csproj.CoreCo
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\obj\Debug\UI.csproj.CopyComplete
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\obj\Debug\UI.dll
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\obj\Debug\UI.pdb
-D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\EntityFramework.dll
-D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\EntityFramework.SqlServer.dll
-D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\Domain.dll.config
-D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\EntityFramework.xml
-D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UI\bin\EntityFramework.SqlServer.xml

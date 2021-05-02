@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UI.ViewModels;
 
 namespace UI.Controllers
 {
@@ -12,13 +13,28 @@ namespace UI.Controllers
     {
         // GET: Candy
         private ICandyRepository repository;
+        public int pageSize = 4;
         public CandyController(ICandyRepository rep)
         {
             repository = rep;
         }
-        public ViewResult List()
+        public ViewResult List(int page = 1)
         {
-            return View(repository.Candies);
+            CandiesListViewModel model = new CandiesListViewModel
+            {
+                Candies = repository.Candies
+                .OrderBy(candy => candy.CandyId)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize),
+
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = pageSize,
+                    TotalItems = repository.Candies.Count()
+                }
+            };
+            return View(model);
         }
     }
 }

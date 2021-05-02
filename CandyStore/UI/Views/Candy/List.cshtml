@@ -1,15 +1,19 @@
-﻿@using Domain.Entities
-@model IEnumerable<Candy>
+﻿@using UI.ViewModels
+@model CandiesListViewModel
 
 @{
     ViewBag.Title = "Товары";
 }
 
-@foreach (var c in @Model)
+@foreach (var candy in @Model.Candies)
 {
     <div>
-        <h3>@c.Name</h3>
-        <p>@c.Description</p>
-        <h4>@c.Price.ToString("# руб")</h4>
+        <h3>@candy.Name</h3>
+        <p>@candy.Description</p>
+        <h4>@candy.Price руб</h4>
     </div>
 }
+
+<div>
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x }))
+</div>
