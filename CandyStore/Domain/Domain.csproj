@@ -76,6 +76,7 @@
     <Compile Include="DataBase\EFDbContext.cs" />
     <Compile Include="DataBase\EFCandyRepository.cs" />
     <Compile Include="Entities\Candy.cs" />
+    <Compile Include="Entities\Cart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,43 @@
+﻿@model UI.ViewModels.CartIndexViewModel
+
+@{
+    ViewBag.Title = "Shopping cart";
+}
+
+<h2>Your cart</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Quantity</th>
+            <th>Candy</th>
+            <th class="text-right">Cost</th>
+            <th class="text-right">Total cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var line in Model.Cart.Lines)
+        {
+            <tr>
+                <td class="text-center">@line.Quantity</td>
+                <td class="text-left">@line.Candy.Name</td>
+                <td class="text-right">@line.Candy.Price RUB</td>
+                <td class="text-right">
+                    @((line.Quantity * line.Candy.Price)) RUB
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Total:</td>
+            <td class="text-right">
+                @Model.Cart.ComputeTotalValue() RUB
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="text-center">
+    <a class="btn btn-primary" href="@Model.ReturnUrl">Continue your shopping</a>
+</div>
+

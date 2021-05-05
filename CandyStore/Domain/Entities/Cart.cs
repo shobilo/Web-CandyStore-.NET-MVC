@@ -13,7 +13,7 @@ namespace Domain.Entities
         public void AddItem(Candy candy, int quantity)
         {
             CartLine line = lineCollection
-                .Where(g => g.Candy.CandyId == candy.CandyId)
+                .Where(c => c.Candy.CandyId == candy.CandyId)
                 .FirstOrDefault();
 
             if (line == null)

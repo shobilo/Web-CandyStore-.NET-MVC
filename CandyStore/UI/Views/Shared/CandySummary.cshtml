@@ -3,9 +3,17 @@
 <div class="card">
     <h3>
         <strong>@Model.Name</strong>
-        <span class="float-right badge badge-info">@Model.Price руб</span>
-        <span class="float-right badge badge-success">@Model.Weight гр</span>
+        <span class="float-right badge badge-info">@Model.Price RUB</span>
+        <span class="float-right badge badge-success">@Model.Weight Gr</span>
     </h3>
+    @using (Html.BeginForm("AddToCart", "Cart"))
+    {
+        <div class="pull-right">
+            @Html.HiddenFor(x => x.CandyId)
+            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+            <input type="submit" class="btn btn-success" value="Add to the cart" />
+        </div>
+    }
     <span class="lead">@Model.Description</span>
 </div>
 
