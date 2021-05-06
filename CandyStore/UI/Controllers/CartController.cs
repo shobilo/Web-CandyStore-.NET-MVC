@@ -17,48 +17,41 @@ namespace UI.Controllers
         {
             repository = repo;
         }
-        public ViewResult Index(string returnUrl)
+        public ViewResult Index(Cart cart,string returnUrl)
         {
             return View(new CartIndexViewModel
             {
-                Cart = GetCart(),
+                Cart = cart,
                 ReturnUrl = returnUrl
             });
         }
 
-        public RedirectToRouteResult AddToCart(int candyId, string returnUrl)
+        public RedirectToRouteResult AddToCart(Cart cart, int candyId, string returnUrl)
         {
             Candy candy = repository.Candies
                 .FirstOrDefault(c => c.CandyId == candyId);
 
             if (candy != null)
             {
-                GetCart().AddItem(candy, 1);
+                cart.AddItem(candy, 1);
             }
             return RedirectToAction("Index", new { returnUrl });
         }
 
-        public RedirectToRouteResult RemoveFromCart(int candyId, string returnUrl)
+        public RedirectToRouteResult RemoveFromCart(Cart cart, int candyId, string returnUrl)
         {
             Candy candy = repository.Candies
                 .FirstOrDefault(c => c.CandyId == candyId);
 
             if (candy != null)
             {
-                GetCart().RemoveLine(candy);
+                cart.RemoveLine(candy);
             }
             return RedirectToAction("Index", new { returnUrl });
         }
-
-        public Cart GetCart()
+        public PartialViewResult Summary(Cart cart)
         {
-            Cart cart = (Cart)Session["Cart"];
-            if (cart == null)
-            {
-                cart = new Cart();
-                Session["Cart"] = cart;
-            }
-            return cart;
+            return PartialView(cart);
         }
     }
 }

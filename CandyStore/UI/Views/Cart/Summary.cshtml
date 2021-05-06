@@ -1,0 +1,14 @@
+﻿@model Domain.Entities.Cart
+
+<div class="navbar-right nav-item active">
+    @Html.ActionLink("Order", "Index", "Cart",
+    new { returnUrl = Request.Url.PathAndQuery },
+    new { @class = "btn btn-default" })
+</div>
+
+<div class="navbar-text navbar-right nav-item" style="colo">
+    <b>Your Cart:</b>
+    @Model.Lines.Sum(x => x.Quantity) candies,
+    @Model.ComputeTotalValue() RUB
+</div>
+

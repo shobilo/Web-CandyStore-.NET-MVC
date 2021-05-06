@@ -24,6 +24,14 @@
                 <td class="text-right">
                     @((line.Quantity * line.Candy.Price)) RUB
                 </td>
+                <td>
+                    @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                    {
+                        @Html.Hidden("CandyId", line.Candy.CandyId)
+                        @Html.HiddenFor(x => x.ReturnUrl)
+                        <input class="btn btn-sm btn-danger" type="submit" value="Удалить" />
+                    }
+                </td>
             </tr>
         }
     </tbody>
