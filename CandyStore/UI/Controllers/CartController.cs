@@ -53,5 +53,33 @@ namespace UI.Controllers
         {
             return PartialView(cart);
         }
+        public ViewResult Checkout(Cart cart, string returnUrl)
+        {
+            if (cart.Lines.Count() == 0)
+            {
+                ModelState.AddModelError("", "Dear user your cart is empty!");
+                return Index(cart, returnUrl);
+            }
+            else
+            {
+                return View(new ShippingInfo());
+            }
+        }
+
+
+        [HttpPost]
+        public ViewResult Checkout(Cart cart, ShippingInfo shippingInfo)
+        {
+
+            if (ModelState.IsValid)
+            {
+                cart.Clear();
+                return View("Completed");
+            }
+            else
+            {
+                return View(shippingInfo);
+            }
+        }
     }
 }

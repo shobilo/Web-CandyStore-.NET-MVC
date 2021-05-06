@@ -1,0 +1,41 @@
+﻿@model Domain.Entities.ShippingInfo
+
+@{
+    ViewBag.Title = "Checkout";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary();
+
+    <h2>Shipping information</h2>
+    <div class="form-group">
+        <label>Name:</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Surname:</label>
+        @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Country:</label>
+        @Html.TextBoxFor(x => x.Country, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>City:</label>
+        @Html.TextBoxFor(x => x.City, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>First address:</label>
+        @Html.TextBoxFor(x => x.AddressLine1, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Second address:</label>
+        @Html.TextBoxFor(x => x.AddressLine2, new { @class = "form-control" })
+    </div>
+
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Apply" />
+    </div>
+}
+
