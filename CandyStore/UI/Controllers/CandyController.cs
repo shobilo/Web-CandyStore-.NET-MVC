@@ -40,5 +40,19 @@ namespace UI.Controllers
             };
             return View(model);
         }
+        public FileContentResult GetImage(int candyId)
+        {
+            Candy candy = repository.Candies
+                .FirstOrDefault(c => c.CandyId == candyId);
+
+            if (candy != null)
+            {
+                return File(candy.ImageData, candy.ImageMimeType);
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

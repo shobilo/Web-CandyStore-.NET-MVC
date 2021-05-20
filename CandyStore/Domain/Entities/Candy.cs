@@ -34,5 +34,7 @@ namespace Domain.Entities
         [Display(Name = "Weight (gr)")]
         [Required(ErrorMessage = "Please, input the Weight")]
         public decimal Weight { get; set; }
+        public byte[] ImageData { get; set; }
+        public string ImageMimeType { get; set; }
     }
 }

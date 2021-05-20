@@ -32,10 +32,16 @@ namespace UI.Controllers
             return View("Edit", new Candy());
         }
         [HttpPost]
-        public ActionResult Edit(Candy candy)
+        public ActionResult Edit(Candy candy, HttpPostedFileBase image = null)
         {
             if (ModelState.IsValid)
             {
+                if (image != null)
+                {
+                    candy.ImageMimeType = image.ContentType;
+                    candy.ImageData = new byte[image.ContentLength];
+                    image.InputStream.Read(candy.ImageData, 0, image.ContentLength);
+                }
                 repository.SaveChanges(candy);
                 TempData["message"] = string.Format("Changes for \"{0}\" were saved", candy.Name);
                 return RedirectToAction("Index");

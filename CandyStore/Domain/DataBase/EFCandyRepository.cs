@@ -31,6 +31,8 @@ namespace Domain.DataBase
                     editedCandy.Price = candy.Price;
                     editedCandy.Weight = candy.Weight;
                     editedCandy.Category = candy.Category;
+                    editedCandy.ImageData = candy.ImageData;
+                    editedCandy.ImageMimeType = candy.ImageMimeType;
                 }
             }
 
