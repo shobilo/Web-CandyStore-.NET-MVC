@@ -58,7 +58,11 @@ namespace UI.Controllers
             if (cart.Lines.Count() == 0)
             {
                 ModelState.AddModelError("", "Dear user your cart is empty!");
-                return Index(cart, returnUrl);
+                return View(new CartIndexViewModel
+                {
+                    Cart = cart,
+                    ReturnUrl = returnUrl
+                });
             }
             else
             {

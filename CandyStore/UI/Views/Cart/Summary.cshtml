@@ -6,7 +6,7 @@
     new { @class = "btn btn-default" })
 </div>
 
-<div class="navbar-text navbar-right nav-item" style="colo">
+<div class="navbar-text navbar-right nav-item">
     <b>Your Cart:</b>
     @Model.Lines.Sum(x => x.Quantity) candies,
     @Model.ComputeTotalValue() RUB

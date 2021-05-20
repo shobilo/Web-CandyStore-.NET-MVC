@@ -1,0 +1,48 @@
+﻿@model Domain.Entities.Candy
+
+@{
+    ViewBag.Title = "Admin panel: Editing";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    HtmlHelper.ClientValidationEnabled = false;
+    HtmlHelper.UnobtrusiveJavaScriptEnabled = false;
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3>Edit menu</h3>
+    </div>
+
+    @using (Html.BeginForm("Edit", "Admin"))
+    {
+        <div class="card-body">
+            @Html.HiddenFor(m => m.CandyId)
+            @foreach (var property in ViewData.ModelMetadata.Properties)
+            {
+                if (property.PropertyName != "CandyId")
+                {
+                    <div class="card-group">
+                        <label>@(property.DisplayName ?? property.PropertyName)</label>
+                        @if (property.PropertyName == "Description")
+                        {
+                            @Html.TextArea(property.PropertyName, null,
+                                new { @class = "form-control", rows = 5 })
+                        }
+                        else
+                        {
+                            @Html.TextBox(property.PropertyName, null,
+                                new { @class = "form-control" })
+                        }
+                        @Html.ValidationMessage(property.PropertyName)
+                    </div>
+                }
+            }
+        </div>
+        <div class="card-footer">
+            <input type="submit" value="Save" class="btn btn-primary" />
+            @Html.ActionLink("Cancel the changes", "Index", null, new
+            {
+                @class = "btn btn-default"
+            })
+        </div>
+    }
+</div>

@@ -12,7 +12,5 @@ namespace Domain.DataBase
     public class EFDbContext : DbContext
     {
         public DbSet<Candy> Candies { get; set; }
-        public EFDbContext(string connectionString) : base(nameOrConnectionString: connectionString)
-        { }
     }
 }

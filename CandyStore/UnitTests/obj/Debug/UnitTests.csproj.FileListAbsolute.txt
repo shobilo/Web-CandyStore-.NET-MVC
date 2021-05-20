@@ -1,5 +1,3 @@
-D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UnitTests\obj\Debug\UnitTests.csprojAssemblyReference.cache
-D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UnitTests\obj\Debug\UnitTests.csproj.CoreCompileInputs.cache
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -56,6 +54,8 @@ D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UnitTests\bin\Debug\ru\System
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UnitTests\bin\Debug\ru\System.Web.WebPages.resources.dll
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UnitTests\bin\Debug\ru\System.Web.WebPages.Deployment.resources.dll
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UnitTests\bin\Debug\ru\System.Web.WebPages.Razor.resources.dll
+D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UnitTests\obj\Debug\UnitTests.csprojAssemblyReference.cache
+D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UnitTests\obj\Debug\UnitTests.csproj.CoreCompileInputs.cache
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UnitTests\obj\Debug\UnitTests.csproj.CopyComplete
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UnitTests\obj\Debug\UnitTests.dll
 D:\Projects\git\Web-CandyStore-.NET-MVC\CandyStore\UnitTests\obj\Debug\UnitTests.pdb

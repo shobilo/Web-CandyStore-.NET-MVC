@@ -8,17 +8,43 @@ namespace Domain.DataBase
 {
     public class EFCandyRepository : ICandyRepository
     {
-        EFDbContext context;
-
-        public EFCandyRepository()
-        {
-            string mdfFilePath = HttpContext.Current.Server.MapPath("~/App_Data/CandyStore.mdf");
-            context = new EFDbContext(string.Format(@"Data Source=USER-PC;Initial Catalog=CandyStore;Integrated Security=True", mdfFilePath));
-        }
+        EFDbContext context = new EFDbContext();
 
         public IEnumerable<Candy> Candies
         {
             get { return context.Candies; }
+        }
+
+        public void SaveChanges(Candy candy)
+        {
+            if (candy.CandyId == 0)
+            {
+                context.Candies.Add(candy);
+            }
+            else
+            {
+                Candy editedCandy = context.Candies.Find(candy.CandyId);
+                if (editedCandy != null)
+                {
+                    editedCandy.Name = candy.Name;
+                    editedCandy.Description = candy.Description;
+                    editedCandy.Price = candy.Price;
+                    editedCandy.Weight = candy.Weight;
+                    editedCandy.Category = candy.Category;
+                }
+            }
+
+            context.SaveChanges();
+        }
+        public Candy Remove(int candyId)
+        {
+            Candy removeCandy = context.Candies.Find(candyId);
+            if (removeCandy != null)
+            {
+                context.Candies.Remove(removeCandy);
+                context.SaveChanges();
+            }
+            return removeCandy;
         }
     }
 }
